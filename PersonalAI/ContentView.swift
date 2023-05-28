@@ -39,10 +39,9 @@ struct ContentView: View {
                 }
             }
             .padding()
-            .onAppear {
-                openAIService.sendMessage(message:"Generate a tagline for and Ice Cream Shop")
             }
         }
+
     func messageView(message: ChatMessage) -> some View {
         HStack {
             if message.sender == .me { Spacer() }
@@ -58,7 +57,6 @@ struct ContentView: View {
     func sendMessage() {
         messageText = ""
         print(messageText)
-    }
     }
 
     
