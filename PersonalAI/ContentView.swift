@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @State var chatMessages: [ChatMessage] = ChatMessage.sampleMessages
     @State var messageText: String = ""
-    
+    let openAIService = OpenAIService()
         
     var body: some View {
         VStack{
